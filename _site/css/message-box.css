@@ -13,6 +13,10 @@
 
 @media (prefers-color-scheme: dark) {
 	.message-box {
-		--color-message-box: #082840;
+		color: #000;
+		--color-message-box: #b0ffc0;
+	}
+	.message-box a:any-link{
+		color: #262047 !important;
 	}
 }
