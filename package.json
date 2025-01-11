@@ -6,9 +6,9 @@
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
-		"start": "npx @11ty/eleventy --serve --quiet",
-		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/",
+		"start": "concurrently \"eleventy --serve --quiet\" \"sass --watch public/scss/index.scss public/css/index.css --style compressed --no-source-map \"",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
@@ -46,6 +46,7 @@
 		"zod-validation-error": "^3.3.1"
 	},
 	"dependencies": {
+		"concurrently": "^8.2.2",
 		"@zachleat/heading-anchors": "^1.0.1"
 	}
 }

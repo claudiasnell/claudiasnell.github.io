@@ -1,0 +1,37 @@
+:root{
+    --color-gray-20: #FEFAFB;
+	--color-gray-50: #FCECF1;
+	--color-gray-90: #323232;
+
+	--background-color: #fcecf1;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #E34C3F;
+	--text-color-link-active: #339471;
+	--text-color-link-visited: #5f2b48;
+
+	--syntax-tab-size: 2;
+    --font-size-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --font-size-1:  clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --font-size-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --font-size-3: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
+    --font-size-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
+    --font-size-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
+    --font-size-02:  clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --font-size-01: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #FEFAFB;
+		--color-gray-50: #FCECF1;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #F7C9D8;
+		--text-color-link-active: #339471;
+		--text-color-link-visited: #ff9aba;
+
+		--background-color: #1a1a1a;
+	}
+}
