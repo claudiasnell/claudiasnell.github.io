@@ -1,0 +1,28 @@
+  :root{
+    --font-family: Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+
+
+  }
+
+  body{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: var(--font-size-0);
+  }
+
+  h1, h2, h3{
+   
+    font-weight: 900;
+    text-transform: capitalize;
+  }
+  h1{ font-size: var(--font-size-3);}
+  h2{ font-size: var(--font-size-2);}
+  h3{ font-size: var(--font-size-1);}
+  
+  button, .button, .post-meta, .menu{
+   
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: var(--font-size-01);
+
+  }

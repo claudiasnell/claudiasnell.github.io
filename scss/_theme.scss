@@ -1,0 +1,21 @@
+html,
+body {
+
+	background-color: var(--background-color);
+    color: var(--color-gray-90);
+}
+
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
