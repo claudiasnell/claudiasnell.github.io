@@ -6,4 +6,4 @@ const eleventyNavigation = {
 ---
 # About
 
-I am a person that writes stuff.
+I am an eater of chocolate, drinker of coffee, builder of websites and friend to cats and dragons. 

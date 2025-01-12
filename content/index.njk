@@ -6,9 +6,29 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 3;
 ---
+
+
+<h1>Claudia Snell: Front-end Web Developer & Coffee Enthusiast</h1>
+<p class="lede">A place to keep links to my profiles and projects.</p>
+
+<h2>Follow me</h2>
+<ul>
+  <li><a href="https://github.com/claudiasnell"</a>GitHub</a> / @claudiasnell</li>
+  <li><a href="https://www.linkedin.com/in/claudiasnell">LinkedIn</a> / @claudiasnell</li>
+  <li><a href="https://bsky.app/profile/claudiasnell.bsky.social">Bluesky</a> / claudiasnell.bsky.social</li>
+  <li><a href="https://www.instagram.com/claudiasnell/">Instagram</a> / @claudiasnell</li>
+  <li><a href="https://www.instagram.com/wfhofficedrama/">My cats and dragons on Instagram</a>  / @wfhofficedrama</li>
+</ul>
+<h2>My personal blogs</h2>
+<ul>
+  <li>My photography blog: <a href="https://angleofview.com">Angle of View</a></li>
+  <li>My personal site of nonsense: <a href="https://claudiasnell.dev">Claudia Snell's Nonsense</a></li>
+</ul>
+
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -27,3 +47,4 @@ const numberOfLatestPostsToShow = 3;
 	{%- endfor %}
 </ul>
 #}
+
