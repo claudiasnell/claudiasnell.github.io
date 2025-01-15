@@ -1,5 +1,5 @@
 export default {
-	title: "Claudia Snell",
+	title: "Claudia Snell: contact links",
 	url: "https://claudiasnell.github.io/",
 	language: "en",
 	description: "This is my github site.",

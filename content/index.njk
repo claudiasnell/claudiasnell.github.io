@@ -13,38 +13,24 @@ const numberOfLatestPostsToShow = 3;
 
 <h2>Follow me</h2>
 <ul>
-  <li><a href="https://github.com/claudiasnell"</a>GitHub</a> / @claudiasnell</li>
+
   <li><a href="https://www.linkedin.com/in/claudiasnell">LinkedIn</a> / @claudiasnell</li>
-  <li><a href="https://bsky.app/profile/claudiasnell.bsky.social">Bluesky</a> / claudiasnell.bsky.social</li>
+    <li><a href="https://github.com/claudiasnell"</a>GitHub</a> / @claudiasnell</li>
+    <li>
+    <a href="https://www.threads.net/@claudiasnell">Threads</a> / @claudiasnell</li>
+    <li><a href="https://bsky.app/profile/claudiasnell.bsky.social">Bluesky</a> / claudiasnell.bsky.social</li>
+  <li><a href="https://a11y.info/@claudiasnell">Mastodon</a> / @claudiasnell@a11y.info</li>
   <li><a href="https://www.instagram.com/claudiasnell/">Instagram</a> / @claudiasnell</li>
-  <li><a href="https://www.instagram.com/wfhofficedrama/">My cats and dragons on Instagram</a>  / @wfhofficedrama</li>
 </ul>
-<h2>My personal blogs</h2>
+<h2>My personal Nonsense</h2>
 <ul>
-  <li>My photography blog: <a href="https://angleofview.com">Angle of View</a></li>
-  <li>My personal site of nonsense: <a href="https://claudiasnell.dev">Claudia Snell's Nonsense</a></li>
+  <li>My photography blog: <a href="https://angleofview.com">Angle of View</a> and photography Instagram, <a href="https://www.instagram.com/claudiasnellphoto/">@claudiasnellphoto</a></li>
+  <li>My personal site of nonsense: <a href="https://claudiasnell.dev">Claudia Snell's Nonsense</a>*</li>
+  <li>Meet my Team: <a href="https://claudiasnell.dev/team">My Team</a> or check out their Instagram, <a href="https://www.instagram.com/wfhofficedrama/">@wfhofficedrama</a></li>
 </ul>
 
+* Here's the archived version of my <a href="https://flourishing-dolphin.netlify.app/">Nonsense site</a> (inspired by the nonsense I built on Geocities 1000 years ago)
 
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
-
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
 
