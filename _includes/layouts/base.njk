@@ -50,32 +50,7 @@
 			<p class="site-title"><a href="/" class="home-link">{{ metadata.title }}</a></p>
 
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav class="nav-menu">
-				<button aria-label="Menu" class="menu-toggle hamburger hamburger--spin">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
 			
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-			
-				</button>
-				<div class="nav-primary">
-				<ul id="primary-menu" class="nav menu">
-	
-
-
-
-				{% for item in navigation.items %}
-      <li class="nav-item">
-      <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-      </li>
-      {% endfor %}
-				</ul>
-				
-				</div>
-				
-			</nav>
 			
 
 
