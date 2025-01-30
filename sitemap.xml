@@ -2,32 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://claudiasnell.github.io/blog/hello/</loc>
-		<lastmod>2025-01-12</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://claudiasnell.github.io/about/</loc>
-		<lastmod>2025-01-21</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://claudiasnell.github.io/blog/</loc>
-		<lastmod>2025-01-21</lastmod>
+		<lastmod>2025-01-30</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://claudiasnell.github.io/</loc>
-		<lastmod>2025-01-21</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://claudiasnell.github.io/tags/</loc>
-		<lastmod>2025-01-21</lastmod>
+		<lastmod>2025-01-30</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://claudiasnell.github.io/feed/feed.xml</loc>
-		<lastmod>2025-01-21</lastmod>
+		<lastmod>2025-01-30</lastmod>
 	</url>
 </urlset>

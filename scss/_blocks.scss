@@ -1,0 +1,42 @@
+.quote {
+    background: var(--theme-primary-20);
+    color: var(--button-text);
+    color: var(--neutral-60);
+    padding-inline: var(--space-s);
+    padding-block-start: var(--space-2xl);
+    padding-block-end: var(--space-3xl);
+}
+
+
+.elsewhere article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+.elsewhere{
+    padding-block: var(--space-2xl);
+}
+@media screen and (min-width: 700px){
+    .elsewhere article{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    
+    }
+    .elsewhere picture{
+        width: 55%;
+        
+    }
+}
+.social-links{
+    list-style-type: none;
+    display: inline-flex;
+    gap: var(--space-s);
+    margin: 0;
+    padding: 0;
+  
+}
