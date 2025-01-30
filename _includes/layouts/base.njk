@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
+		<title>{{ title }} | {{ metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		<meta name="generator" content="{{ eleventy.generator }}"> 
+		 <meta name="generator" content="{{ eleventy.generator }}"> 
 		 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕️</text></svg>">
 
 		{#-
@@ -21,12 +21,10 @@
 			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
 		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
 		#}
-		<link rel="preload"
-      href="https://claudiasnell.github.io/fonts/InterVariable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous">
-
+	
+		{% js %}{% include "public/js/menu.js" %}{% endjs %}
+		{% js %}{% include "public/js/theme-switch.js" %}{% endjs %}
+			<script>{% getBundle "js" %}</script>
 		{#- Add an arbitrary string to the bundle #}
 		{%- css %}/* This is an arbitrary CSS string added to the bundle */{% endcss %}
 		{#- Add the contents of a file to the bundle #}
@@ -36,34 +34,84 @@
 
 		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
+	
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+
+	
 	</head>
-	<body>
+	<body class="site">
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+		<header class="masthead">
+			<p class="site-title"><a href="/" class="home-link">{{ metadata.title }}</a></p>
 
-		
+
+			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+			<nav class="nav-menu">
+				<button aria-label="Menu" class="menu-toggle hamburger hamburger--spin">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+			
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+			
+				</button>
+				<div class="nav-primary">
+				<ul id="primary-menu" class="nav menu">
+	
+
+
+
+				{% for item in navigation.items %}
+      <li class="nav-item">
+      <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+      </li>
+      {% endfor %}
+				</ul>
+				
+				</div>
+				
+			</nav>
+			
+
+
+</div>
+
+
+
 		</header>
 
-		<main id="skip">
+		<main id="skip" class="{{ pageClass }}">
 			
-			<heading-anchors>
-				<article class="flow">
-				{{ content | safe }}
-				</article>
-			</heading-anchors>
+			
+					{{ content | safe }}
+			
+			
+	
 		
-			
+
+<button class="scrollToTopBtn">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="top-nav-icon" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm11.3-395.3l112 112c4.6 4.6 5.9 11.5 3.5 17.4s-8.3 9.9-14.8 9.9l-64 0 0 96c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96-64 0c-6.5 0-12.3-3.9-14.8-9.9s-1.1-12.9 3.5-17.4l112-112c6.2-6.2 16.4-6.2 22.6 0z"/></svg>
+  <span class="visually-hidden">Back to top</span>
+
+</button>
+
 		</main>
 
 		<footer>
-			<p><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a> and the <a href="https://github.com/11ty/eleventy-base-blog">Eleventy Base Blog</a></em></p>
+			<div class="footer-one">
+			<p><em>&copy; 2019 - 2025 Claudia Snell. Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a> using the <a href="https://github.com/11ty/eleventy-base-blog">Eleventy Base Blog</a>.</em></p>
+		
+
+			</div>
+			<div class="footer-two">
+			 {% include "theme-switcher.njk" %}
+			 </div>
+	
 		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->

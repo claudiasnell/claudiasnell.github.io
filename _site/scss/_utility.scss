@@ -1,0 +1,37 @@
+.boxed{
+    border: 1px dotted;
+    padding: var(--space-m);
+    border-radius: 5px;
+    margin-block: var(--space-m);
+}
+
+.wrap{
+    width: 90%; 
+    max-width: 1200px;
+    margin-inline: auto;
+    
+    }
+
+.video-containment, .team-intro{
+    margin-block-start: var(--space-m);
+    }
+    iframe{
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 100%;
+    }
+
+    .photos{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    gap: var(--space-m); 
+    margin-block: var(--space-2xl);
+    }
+
+    .grid{
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    gap: var(--space-m);   
+}

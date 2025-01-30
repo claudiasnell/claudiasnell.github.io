@@ -5,38 +5,30 @@ const eleventyNavigation = {
 };
 
 const numberOfLatestPostsToShow = 3;
+const banner="remote-work.jpg";
 ---
 
-<div class="intro">
-  <img src="/profile-pic/pop-avatar-orange.png" alt="my notion avatar" width="250" height="250">
-  <div>
+
+<section class="hero">
+  <div class="page-intro">
 <h1>Claudia Snell: Front-end Web Developer & Coffee Enthusiast</h1>
-<p class="lede">A place to keep links to my profiles and projects.</p>
-</div>
-
+<p class="lede">I'm a freelance front-end developer from Worcester, Massachusetts and this is my place to keep links to my profiles and projects.</p>
 
 </div>
 
-<h2>Follow me</h2>
-<ul>
+<div class="banner" style="background-image: url('/banners/{{ banner }}'); ">
 
-  <li><a href="https://www.linkedin.com/in/claudiasnell">LinkedIn</a> / @claudiasnell</li>
-    <li><a href="https://github.com/claudiasnell"</a>GitHub</a> / @claudiasnell</li>
-    <li>
-    <a href="https://www.threads.net/@claudiasnell">Threads</a> / @claudiasnell</li>
-    <li><a href="https://bsky.app/profile/claudiasnell.bsky.social">Bluesky</a> / claudiasnell.bsky.social</li>
-  <li><a href="https://a11y.info/@claudiasnell">Mastodon</a> / @claudiasnell@a11y.info</li>
-  <li><a href="https://www.instagram.com/claudiasnell/">Instagram</a> / @claudiasnell</li>
-</ul>
-<h2>My personal Nonsense</h2>
-<ul>
-  <li>My photography blog: <a href="https://angleofview.com">Angle of View</a> and photography Instagram, <a href="https://www.instagram.com/claudiasnellphoto/">@claudiasnellphoto</a></li>
-  <li>My personal site of nonsense: <a href="https://claudiasnell.dev">Claudia Snell's Nonsense</a>*</li>
-  <li>Meet my Team: <a href="https://claudiasnell.dev/team">My Team</a> or check out their Instagram, <a href="https://www.instagram.com/wfhofficedrama/">@wfhofficedrama</a></li>
-</ul>
+</div>
 
-* Here's the archived version of my <a href="https://flourishing-dolphin.netlify.app/">Nonsense site</a> (inspired by the nonsense I built on Geocities 1000 years ago)
+</section>
 
+  <section class="quote">
+    <div class="wrap">
+       <blockquote><p>
+     “Everything I learned in my life, I learned because I decided to try something new.”
+― David Lynch</p>
+</div>
+</blockquote>
+    </section>
 
-
-
+    {% include "elsewhere.njk" %}

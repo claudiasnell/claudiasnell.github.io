@@ -1,0 +1,9 @@
+.team-photo img{
+    object-fit: cover;
+    margin-inline: auto;
+    aspect-ratio: 1/1;
+    max-height: 400px;
+}
+.team-name{
+   display: block;
+}

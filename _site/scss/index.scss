@@ -1,6 +1,20 @@
 @use "reset";
 @use "visually-hidden";
 @use "variables";
-@use "base";
-@use "typography";
 @use "theme";
+@use "layout";
+@use "type";
+@use "hero";
+@use "nav-button-links";
+@use "masthead-footer";
+@use "hamburgers/hamburgers";
+@use "utility";
+@use "blocks";
+@use "team";
+
+
+.footer-navigation{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}

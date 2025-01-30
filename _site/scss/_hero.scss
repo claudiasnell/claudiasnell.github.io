@@ -1,0 +1,39 @@
+.page-intro{
+    padding: var(--space-m);
+}
+.banner{
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+}
+.hero {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content 500px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "page-intro page-intro page-intro page-intro"
+      "banner banner banner banner";
+  }
+  
+  .page-intro { grid-area: page-intro; }
+  
+  .banner { grid-area: banner; }
+  
+  @media screen and (min-width: 1100px) {
+
+    .hero {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "page-intro page-intro banner banner";
+      }
+      
+      .page-intro { grid-area: page-intro; }
+      
+      .banner { grid-area: banner; }
+      
+    
+  }

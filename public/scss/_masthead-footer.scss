@@ -1,0 +1,122 @@
+.masthead, footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding-inline: var(--space-xs);
+    padding-block-end: var(--space-xs);
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    gap: var(--space-m);
+    flex-wrap: wrap;
+    padding-inline: var(--space-m);
+    padding-block: var(--space-xl);
+}
+@media screen and (min-width: 900px){
+    footer{
+        text-align: left;
+        justify-content: space-between;
+    }
+}
+.nav-menu ul{
+  list-style-type: none;
+}
+.nav-menu button{
+  display: none;
+  width: fit-content;
+  height: auto;
+  padding: var(--space-3xs);
+  padding-top: var(--space-xs);
+  
+}
+.js .nav-menu button{
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: .5rem;
+  background: var(--neutral-50);
+}
+.js .active  #primary-menu{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  gap: var(--space-m);
+  margin-right: 2rem;
+}
+#primary-menu{
+  display: none;
+}
+@media screen and (min-width: 1100px) {
+  .nav-menu button, .js .nav-menu button{
+    display: none;
+  }
+  #primary-menu{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
+  }
+
+}
+
+
+.button-group{
+    display:none;
+  }
+  .js .button-group{
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+  :where([role="group"].button-group){
+  
+  
+    border-radius: var(--button-border-radius);
+    max-width: max-content;
+    box-shadow: var(--shadow-1);
+  }
+  
+  .button-group button{
+  
+  
+    border: 0;
+    padding: var(--space-3xs);
+    box-shadow: var(--shadow-1);
+    display: inline-flex;
+    align-items: center;
+    gap: .2rem;
+    margin-inline: 0;
+    text-transform: capitalize;
+  
+  }
+  .button-group button svg{
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .button-group button:active{
+    box-shadow: none;
+  }
+  .button-group button#light-mode{
+    border-top-left-radius: var(--button-border-radius);
+    border-bottom-left-radius: var(--button-border-radius);
+  }
+  .button-group button#light-mode svg{
+    width: 1.3rem;
+    height: 1.1rem;
+  
+  }
+  .button-group button#reset{
+    border-top-right-radius: var(--button-border-radius);
+    border-bottom-right-radius: var(--button-border-radius);
+  }
+  .button-group button:focus-visible{
+   outline-offset:  -4px;
+  }
+  
+  
+  
+  
+  
+  
