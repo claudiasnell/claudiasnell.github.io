@@ -12,6 +12,20 @@ a:any-link{
 }
 .tag, button{
   border-radius: var(--button-border-radius);
+  transition: all .2s ease-out;
+ 
+  
+}
+.tag:hover, button:hover{
+
+  transform: scale(1.1);
+}
+.tag:active, button:active{
+
+  transform: scale(.99);
+  -webkit-box-shadow: inset 0px 0px 5px var(--neutral-30);
+  -moz-box-shadow: inset 0px 0px 5px var(--neutral-30);
+       box-shadow: inset 0px 0px 5px var(--neutral-30);
 }
 button{
   margin-inline: var(--space-3xs);

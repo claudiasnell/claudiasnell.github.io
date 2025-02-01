@@ -16,10 +16,10 @@
     flex-wrap: nowrap;
 
 }
-
-.elsewhere{
-    padding-block: var(--space-2xl);
+.elsewhere {
+    margin-block: var(--space-2xl);
 }
+
 @media screen and (min-width: 700px){
     .elsewhere article{
         display: flex;
@@ -38,5 +38,6 @@
     gap: var(--space-s);
     margin: 0;
     padding: 0;
+    margin-block-start: var(--space-m);
   
 }
